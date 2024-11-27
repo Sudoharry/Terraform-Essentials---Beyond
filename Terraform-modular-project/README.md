@@ -359,19 +359,21 @@ cd /production
 
 
 
-
 ---
 
 
+## S3 Bucket (backup.tfstate file storage):
+
+
+
+![S3-Bucket-To-Store-Backup-tfstate-file](https://github.com/user-attachments/assets/a22263f3-1748-43d7-a948-85459eda64d0)
 
 
 
 
 
 
-
-
-
+---
 
 # Resources Destroyed:
 
@@ -390,11 +392,9 @@ cd /production
 ---
 
 
+## Key Information on Output Values
+The output.tf files in each module are essential for transferring data between different modules. For instance, the VPC module exports the vpc_id, which is then utilized by both the Security Group and EC2 modules. This modular design ensures that all components are interconnected properly, with clear dependencies between them..
 
-## Notes on Output Values
+## Final Thoughts
 
-The `output.tf` files in each module play a crucial role in passing data between modules. For example, the VPC module exports the `vpc_id`, which is consumed by the Security Group module and EC2 module. This modular approach helps ensure that all components are properly linked, and their dependencies are clear.
-
-## Conclusion
-
-This repository demonstrates how to efficiently manage and deploy infrastructure across multiple environments using Terraform modules. By breaking infrastructure code into reusable modules, we reduce complexity, manual work, and potential errors, leading to a more scalable and maintainable solution.
+This project showcases an efficient approach to managing and deploying infrastructure across different environments with Terraform modules. By modularizing the infrastructure code, we streamline the process, minimizing complexity and manual interventions. This approach not only reduces the potential for errors but also creates a solution that is scalable and easier to maintain.
