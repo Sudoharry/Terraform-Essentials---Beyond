@@ -1,23 +1,16 @@
-# "Scalable and modular infrastructure setup for cloud environments using Terraform."
+# "Leveraging Terraform for dynamic, modular cloud infrastructure management that scales across multiple environments ."
+
+![Terraform-pro-dev](https://github.com/user-attachments/assets/9396c1dc-a1c6-4202-a035-409a6e5c3f64)
+
+This repository showcases a method to organize Terraform code into modules for scalable and maintainable infrastructure deployments across different environments (e.g., development, production). The approach involves dividing the Terraform configuration into reusable modules for key infrastructure components such as networking, compute resources, security groups, load balancers, and NAT gateways. By adopting this modular structure, it reduces manual effort and streamlines transitions between environments.
+
+## Challenges Overview:
+
+In most infrastructure deployments, environments such as development, QA, and production often have unique requirements (e.g., development might not need a load balancer or Route 53). Managing these variations within a single Terraform codebase can result in inefficiencies and manual adjustments. A modular approach allows you to selectively include or exclude components based on the specific needs of each environment, simplifying infrastructure management and improving flexibility
 
 
-![proj](https://github.com/user-attachments/assets/fb5aa28b-59c8-43a7-8671-1ca6cd26a9ee)
-
-
-This repository demonstrates how to modularize Terraform code for a scalable, manageable infrastructure deployment across multiple environments (e.g., dev, production). The key idea is to break down the Terraform code into modules for various infrastructure components like networking, compute, security groups, load balancers, and NAT gateways. This modular approach minimizes manual changes and overhead when switching between environments.
-
-## Problem Overview
-
-In typical infrastructure deployments, environments like dev, QA, and production might have different requirements (e.g., dev doesn’t need a load balancer or Route53). Managing these differences with a single Terraform codebase can lead to manual changes, which is inefficient. By breaking the code into modules, you can dynamically include/exclude components based on environment requirements, making the infrastructure easier to manage.
-
-
-## Modular Structure:
-
-
-
-
-
-![terraform-module-structure-vscode](https://github.com/user-attachments/assets/60eedfd5-b022-442e-9bb3-d8cb52128c26)
+## Scalable Structure:
+![Modular Structure](https://github.com/user-attachments/assets/96710585-ab0f-4068-9786-f4fb791fd715)
 
 
 
@@ -28,15 +21,11 @@ In typical infrastructure deployments, environments like dev, QA, and production
 
 
 
-
-
-
-
-############################################################################################################
+---
 
 ## Solution
 
-We break the infrastructure into the following modules:
+The infrastructure is split into different components for better management:
 - **Network**: VPC, subnets, routing
 - **Compute**: EC2 instances (public and private)
 - **Security Groups (SG)**: For securing VPC resources
@@ -44,7 +33,7 @@ We break the infrastructure into the following modules:
 - **ELB**: Elastic Load Balancers (optional)
 - **IAM**: Identity and Access Management
 
-### Folder Structure
+## Folder Structure
 
 ```
 /modules
@@ -215,10 +204,11 @@ cd /development
 
 
 
-# Ec2-instances:
+# Ec2-Instances:
+
+![EC2-Instances](https://github.com/user-attachments/assets/5ac5cf85-c1e0-424e-b839-d56419e541aa)
 
 
-![dev-instances](https://github.com/user-attachments/assets/c53622e6-acb1-4692-ba2e-82741adfd2dd)
 
 
 
@@ -229,8 +219,9 @@ cd /development
 # Load Balancers:
 
 
+![Load-Balancers](https://github.com/user-attachments/assets/2f048f1a-b8fb-4279-9ad6-9f756f326940)
 
-![dev-lb](https://github.com/user-attachments/assets/7b9a3eb0-1b21-4d24-8b1e-7b5fcccac0e5)
+
 
 
 
@@ -249,10 +240,7 @@ cd /development
 # Network Infra created:
 
 
-
-
-![dev-infra](https://github.com/user-attachments/assets/abfcd3ab-bbf0-452a-8503-bc81de1bde41)
-
+![Network-Infra-created](https://github.com/user-attachments/assets/12400373-f17f-4836-bf9b-b5524644fb5f)
 
 
 
@@ -262,13 +250,11 @@ cd /development
 
 
 
-# Resources Destroyed:
+# Infrastructure created:
 
 
 
-
-
-![dev-resources-destroy](https://github.com/user-attachments/assets/a3f7d571-0fe2-4c87-b840-d8baa8dc9dfe)
+![Terraform-apply](https://github.com/user-attachments/assets/5b4a4141-1ba7-4b90-a06e-110b93a94e17)
 
 
 
@@ -279,9 +265,7 @@ cd /development
 
 
 
-
-################################################################################################################
-
+---
 
 
 
@@ -309,13 +293,13 @@ cd /production
 
 
 
-# resources created:
+# Infrastructure Destroyed:
 
 
 
 
+![Terraform-destroy](https://github.com/user-attachments/assets/3bf107a6-fb6b-461d-a163-74b000db1751)
 
-![prod-state](https://github.com/user-attachments/assets/a8c788d0-5792-4a12-99e1-e2d669d6573d)
 
 
 
@@ -326,20 +310,18 @@ cd /production
 
 
 
-#############################################################################################
 
+---
 
 
 
 
 
-# Load Balancers:
 
 
 
 
 
-![prod-lb](https://github.com/user-attachments/assets/316c7f3f-65b9-4583-9564-f8d5a73e5845)
 
 
 
@@ -351,7 +333,7 @@ cd /production
 
 
 
-############################################################################################
+# Network Infrastructure Created:
 
 
 
@@ -361,9 +343,9 @@ cd /production
 
 
 
+![Network-Infra-created](https://github.com/user-attachments/assets/86486c1c-58e1-42f2-8d83-2deea6e3858e)
 
 
-# Ec2 Instances:
 
 
 
@@ -371,7 +353,6 @@ cd /production
 
 
 
-![prod-instances](https://github.com/user-attachments/assets/f9c26955-7898-4954-8b5c-b458b52c5a5c)
 
 
 
@@ -380,55 +361,7 @@ cd /production
 
 
 
-
-
-
-
-
-
-#################################################################################################
-
-
-
-
-
-
-
-
-
-
-
-
-# Network Infra Created:
-
-
-
-
-
-
-
-
-
-![prod-infra](https://github.com/user-attachments/assets/52304c0f-6fd6-4235-99e1-7123f46c7e58)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-########################################################################################################
-
+---
 
 
 
@@ -445,17 +378,17 @@ cd /production
 
 
 
+![Terraform-destroy](https://github.com/user-attachments/assets/421cd36e-772f-4bc5-b9b5-d795df640494)
 
 
 
 
-![prod-resources-destroy](https://github.com/user-attachments/assets/c2812656-ce15-483b-bbf0-3f3210073346)
 
 
 
 
 
-########################################################################################################
+---
 
 
 
