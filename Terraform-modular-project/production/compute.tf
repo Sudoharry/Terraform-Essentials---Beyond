@@ -40,6 +40,6 @@ module "prod_elb_1_public" {
 module "prod_iam_1" {
   source              = "../modules/iam"
   environment         = module.prod_vpc_1.environment
-  rolename            = "RajRole"
-  instanceprofilename = "Rajprofile"
+  rolename            = "HarryRole"
+  instanceprofilename = "Harryprofile"
 }
