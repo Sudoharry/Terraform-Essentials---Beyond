@@ -11,7 +11,7 @@ terraform {
     }
   }
   backend "s3" {
-    bucket = "rajmodulesbucket"
+    bucket = "harrymodulebucket"
     key    = "dev-modules.tfstate"
     region = "us-east-1"
   }
