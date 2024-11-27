@@ -1,0 +1,40 @@
+.terraform
+.terraform.*
+
+# Ignore environment configuration files
+.env
+.env.local
+.env.production
+
+# Ignore credentials or secrets files
+*.key
+*.pem
+*.crt
+config/secrets.yml
+
+# Ignore database files
+*.db
+*.sqlite3
+
+# Ignore logs
+*.log
+logs/
+
+# Ignore OS-specific files (optional)
+.DS_Store
+Thumbs.db
+
+# Ignore IDE-specific files (optional)
+.idea/
+.vscode/
+
+# Ignore Terraform sensitive files
+*.tfstate
+*.tfstate.backup
+
+# Ignore AWS credentials
+.aws/
+
+# Ignore SSH keys
+*.pem
+*.pub
