@@ -1,4 +1,4 @@
-module "dev_compute_1" {
+okmodule "dev_compute_1" {
   source      = "../modules/compute"
   environment = module.dev_vpc_1.environment
   amis = {
@@ -40,6 +40,6 @@ module "dev_elb_1_public" {
 module "dev_iam_1" {
   source              = "../modules/iam"
   environment         = module.dev_vpc_1.environment
-  rolename            = "Harryrole"
+  rolename            = "HarryRole"
   instanceprofilename = "Harryprofile"
 }
