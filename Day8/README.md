@@ -1,0 +1,4 @@
+# MIGRATION TO TERRAFORM & DRIFT DETECTION
+
+https://youtu.be/-4IMy5ihiiU
+
