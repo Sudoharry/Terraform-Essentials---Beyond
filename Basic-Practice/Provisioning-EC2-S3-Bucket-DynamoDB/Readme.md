@@ -86,7 +86,7 @@ func TestTerraformExample(t *testing.T) {
 ![Steps-by-step-approach](https://github.com/user-attachments/assets/c1b66063-3794-49e3-8910-d5d5c9c6364e)
 
 ---
-### 5. ** `Static Analysis with Checkov`**
+### 5. ** `Static Analysis with Checkov` **
 Checkov is a static analysis tool that scans your Terraform configuration files for security vulnerabilities and misconfigurations. It checks for compliance with best practices and identifies potential risks in your infrastructure code.
 
 **Example Usage**:
