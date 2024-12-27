@@ -79,8 +79,14 @@ func TestTerraformExample(t *testing.T) {
     defer terraform.Destroy(t, terraformOptions)
 }
 ```
+----
+![terraform_test go-files](https://github.com/user-attachments/assets/aa7f9660-e4fc-4162-834e-75793a535578)
 
-### ** `Static Analysis with Checkov`**
+---
+![Steps-by-step-approach](https://github.com/user-attachments/assets/c1b66063-3794-49e3-8910-d5d5c9c6364e)
+
+---
+### 5.** `Static Analysis with Checkov`**
 Checkov is a static analysis tool that scans your Terraform configuration files for security vulnerabilities and misconfigurations. It checks for compliance with best practices and identifies potential risks in your infrastructure code.
 
 **Example Usage**:
@@ -96,14 +102,16 @@ pip install checkov
 ```bash
 checkov -d .
 ```
+![checkov-static-code-analysis](https://github.com/user-attachments/assets/ed3ab5d1-e904-4d60-b4a5-73651bd7db5e)
+
 
 ### Conclusion
 - By using these tools and techniques, you can ensure that your Terraform configuration is valid, well-formatted, and free from common errors and security vulnerabilities. Implementing these testing and validation 
   practices will lead to more reliable and secure infrastructure deployment.
 
 - Summary
-  - terraform validate: Ensures that your Terraform configuration files are syntactically valid.
-  - terraform fmt: Automatically formats your Terraform configuration files to adhere to standard formatting rules.
-  - terraform plan: Previews the changes Terraform will apply to your infrastructure, helping to avoid unintended changes.
-  - Terratest: Advanced testing for Terraform configurations using Go-based automated tests for integration and end-to-end testing.
-  - Checkov: Static analysis for detecting security issues and misconfigurations in Terraform files.
+  1) terraform validate: Ensures that your Terraform configuration files are syntactically valid.
+  2) terraform fmt: Automatically formats your Terraform configuration files to adhere to standard formatting rules.
+  3) terraform plan: Previews the changes Terraform will apply to your infrastructure, helping to avoid unintended changes.
+  4) Terratest: Advanced testing for Terraform configurations using Go-based automated tests for integration and end-to-end testing.
+  5) Checkov: Static analysis for detecting security issues and misconfigurations in Terraform files.
