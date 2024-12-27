@@ -1,4 +1,8 @@
 ### When facing errors during a Terraform plan or apply troubleshooting involves systematically analyzing error messages, understanding the root cause, and resolving the issue.
+![image](https://github.com/user-attachments/assets/bc9dbda9-7a9e-44dd-9e55-5a05dfb3fb69)
+
+---
+![image](https://github.com/user-attachments/assets/fe1ab707-3dfd-456d-a07c-5db9b2722443)
 
 ## 1. Reading and Understanding Terraform Error Logs
  - Terraform provides detailed error logs that can give you insights into the issue. These logs are usually printed directly in the terminal when running terraform plan or 
