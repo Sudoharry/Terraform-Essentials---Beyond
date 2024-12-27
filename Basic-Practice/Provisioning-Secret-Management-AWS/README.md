@@ -68,5 +68,19 @@ resource "aws_secretsmanager_secret" "example" {
 
   secret_string = var.api_key
 }
+```
+
+![encry-key-secret-name](https://github.com/user-attachments/assets/c60217f7-d9d1-4492-9b3f-08de07f93095)
+
+---
+![key-generataed](https://github.com/user-attachments/assets/0b67f7d9-de9c-4568-9776-b53640028b4d)
+
+---
+![Secret-management-using-AWS](https://github.com/user-attachments/assets/527c67da-419e-4830-b854-cda728e97b0e)
+
+---
+![Lifecycle-terraform](https://github.com/user-attachments/assets/d7c357a0-b12f-4387-a404-6fe754f76f82)
+
+
 
 
