@@ -25,35 +25,35 @@ go test -v
 This command runs the test with verbose logging, providing detailed output for each step. The test is executed in the local environment where Terraform and Go are installed and properly configured.
 
 ### 2. Terraform Initialization
-- Command: terraform init
+ Command: terraform init
 
-- Purpose: Initializes the Terraform working directory by downloading required provider plugins and setting up the backend configuration.
+ Purpose: Initializes the Terraform working directory by downloading required provider plugins and setting up the backend configuration.
 
-- Key Logs:
+ Key Logs:
 
   - Reusing previously installed AWS provider (hashicorp/aws).
   - Terraform has been successfully initialized!
 
-- The initialization ensures that Terraform is ready to interact with AWS services. It verifies that the required provider (hashicorp/aws) is available, and the environment is set up to apply configurations.
+ The initialization ensures that Terraform is ready to interact with AWS services. It verifies that the required provider (hashicorp/aws) is available, and the environment is set up to apply configurations.
 
 ### 3. Terraform Apply
-  - Command: terraform apply
+  Command: terraform apply
 
- - Purpose: Applies the Terraform configuration to create or modify resources based on the defined infrastructure. If there are no changes required (i.e., the state is up-to-date), Terraform will inform you that no changes are needed.
+  Purpose: Applies the Terraform configuration to create or modify resources based on the defined infrastructure. If there are no changes required (i.e., the state is up-to-date), Terraform will inform you that no changes are needed.
 
- - Key Logs:
+  Key Logs:
 
-- Terraform compares the real infrastructure with the configuration.
-  - No changes. Your infrastructure matches the configuration.
+ Terraform compares the real infrastructure with the configuration.
+   No changes. Your infrastructure matches the configuration.
 
-- In this step, Terraform compares the actual state of the infrastructure with the defined configuration. If no differences are found between the configuration and the current state, Terraform outputs No changes. Your infrastructure matches the configuration, confirming that no action is required.
+ In this step, Terraform compares the actual state of the infrastructure with the defined configuration. If no differences are found between the configuration and the current state, Terraform outputs No changes. Your infrastructure matches the configuration, confirming that no action is required.
 
 ### 4. Output Retrieval
- - Command: terraform output -json instance_id
+  Command: terraform output -json instance_id
 
- - Purpose: Fetches the output variables defined in the Terraform configuration, in this case, the instance_id of the provisioned EC2 instance.
+  Purpose: Fetches the output variables defined in the Terraform configuration, in this case, the instance_id of the provisioned EC2 instance.
 
- - Key Logs:
+  Key Logs:
 
  makefile
 
@@ -62,18 +62,18 @@ This command runs the test with verbose logging, providing detailed output for e
  The output command retrieves the value of the instance_id that was provisioned in the previous step. The expected output is the EC2 instance ID (i-0285eed1b304245a7), confirming that the EC2 instance has been successfully created and is managed by Terraform.
 
 ### 5. Test Completion
- - Status: PASS
+  Status: PASS
 
- - Summary: The test completes successfully, confirming that no changes were required, and the expected output (EC2 instance ID) was returned. The infrastructure is in the expected state, and Terraform managed the provisioning and output retrieval processes efficiently.
+  Summary: The test completes successfully, confirming that no changes were required, and the expected output (EC2 instance ID) was returned. The infrastructure is in the expected state, and Terraform managed the provisioning and output retrieval processes efficiently.
 
- - Final Output
+  Final Output
 
   The test verifies that the infrastructure is correctly provisioned, and that the EC2 instance ID is properly output by Terraform. The test is considered successful if the output matches the expected results. A successful test will display the instance ID as shown below:
 
 makefile
 
-  - instance_id = "i-0285eed1b304245a7"
-  - This output confirms that the EC2 instance was successfully created or already exists as defined in the Terraform configuration.
+   instance_id = "i-0285eed1b304245a7"
+   This output confirms that the EC2 instance was successfully created or already exists as defined in the Terraform configuration.
 
 ### Key Takeaways
 - Terraform successfully initialized and applied the configuration without any changes.
