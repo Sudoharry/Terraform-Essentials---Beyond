@@ -1,0 +1,16 @@
+ui:
+  enabled: true
+  serviceType: "NodePort"
+
+server:
+  dev:
+    enabled: true
+  service:
+    enabled: true
+    type: NodePort
+    nodePort: 30000
+  image:
+    repository: "hashicorp/vault-enterprise"
+    tag: "1.10.3-ent"
+  enterpriseLicense:
+    secretName: vault-ent-license
