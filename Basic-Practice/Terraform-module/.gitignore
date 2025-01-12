@@ -1,0 +1,44 @@
+# Sensitive Information
+*.key
+*.pem
+*.crt
+*.enc
+
+# AWS Secret Key Files
+credentials
+.aws/credentials
+.aws/config
+
+# Environment Variable Files
+.env
+.env.*
+
+# Terraform State Files
+*.tfstate
+*.tfstate.*
+*.backup
+crash.log
+
+# Terraform Plan Files
+*.tfplan
+
+# Logs
+*.log
+
+# Directory to exclude Terraform working directory
+.terraform/
+.terraform.lock.hcl
+
+# Ignore any system files
+.DS_Store
+Thumbs.db
+
+# IDE Specific Files (optional, based on your IDE)
+.vscode/
+.idea/
+*.swp
+*.swo
+*.bak
+
+# Node.js Modules (if applicable in your project)
+node_modules/
