@@ -1,0 +1,31 @@
+# Terraform
+.terraform/            # Terraform's internal directory
+*.tfstate              # Terraform state files
+*.tfstate.backup       # Backup of state files
+*.tfvars               # Variable files that may contain sensitive information
+crash.log              # Terraform crash logs
+
+# Azure CLI
+.azurerm                # Azure CLI session data
+*.azureauth             # Azure authentication files (specific to Azure CLI)
+
+# AWS CLI
+.aws/                   # AWS CLI session data
+credentials            # AWS CLI credentials (if saved as a file)
+config                 # AWS CLI configuration
+
+# Other common Terraform files
+*.plan                 # Terraform plan files
+*.tfplan               # Plan output files
+*.terraform.lock.hcl   # Terraform lock file (contains provider versions)
+
+
+# Terraform-related files
+.terraform/
+*.tfstate
+*.tfstate.backup
+*.tfvars
+crash.log
+.terraform.lock.hcl
+terraform-provider-*
+*.tfplan
